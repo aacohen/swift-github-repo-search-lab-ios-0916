@@ -7,19 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B15A1391DC29F9D00B15C9F /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B15A1381DC29F9D00B15C9F /* Secrets.swift */; };
 		1B15A13D1DC2A09900B15C9F /* not_starred.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B15A13B1DC2A09900B15C9F /* not_starred.json */; };
 		1B15A13E1DC2A09900B15C9F /* repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B15A13C1DC2A09900B15C9F /* repositories.json */; };
 		1BF884A81DBE950C001E9E9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF884A71DBE950C001E9E9B /* AppDelegate.swift */; };
 		1BF884AA1DBE950C001E9E9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF884A91DBE950C001E9E9B /* ViewController.swift */; };
 		1BF884AF1DBE950C001E9E9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BF884AE1DBE950C001E9E9B /* Assets.xcassets */; };
 		1BF884B21DBE950C001E9E9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF884B01DBE950C001E9E9B /* LaunchScreen.storyboard */; };
+		F38740611DCA28E70054AD82 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38740601DCA28E70054AD82 /* Secrets.swift */; };
+		F38740631DCA28F70054AD82 /* GithubAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38740621DCA28F70054AD82 /* GithubAPIClient.swift */; };
+		F38740651DCA29050054AD82 /* ReposDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38740641DCA29050054AD82 /* ReposDataStore.swift */; };
+		F38740671DCA29130054AD82 /* ReposTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38740661DCA29130054AD82 /* ReposTableViewController.swift */; };
+		F38740691DCA292E0054AD82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38740681DCA292E0054AD82 /* Main.storyboard */; };
+		F387406B1DCA2C560054AD82 /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F387406A1DCA2C560054AD82 /* GithubRepository.swift */; };
+		F387406D1DCA2C690054AD82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F387406C1DCA2C690054AD82 /* LaunchScreen.storyboard */; };
 		FDE5A2D855483A3DBDB88CB6 /* Pods_swift_github_repo_search_lab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB903D33600997305EE0760B /* Pods_swift_github_repo_search_lab.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		06179FC97D4CCA9AF9531AF7 /* Pods-swift-github-repo-search-lab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-github-repo-search-lab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swift-github-repo-search-lab/Pods-swift-github-repo-search-lab.debug.xcconfig"; sourceTree = "<group>"; };
-		1B15A1381DC29F9D00B15C9F /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		1B15A13B1DC2A09900B15C9F /* not_starred.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = not_starred.json; sourceTree = "<group>"; };
 		1B15A13C1DC2A09900B15C9F /* repositories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = repositories.json; sourceTree = "<group>"; };
 		1BF884A41DBE950C001E9E9B /* swift-github-repo-search-lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-github-repo-search-lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,6 +35,13 @@
 		1BF884B31DBE950C001E9E9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA7C84CC2EF21A27A02CA364 /* Pods-swift-github-repo-search-lab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-github-repo-search-lab.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift-github-repo-search-lab/Pods-swift-github-repo-search-lab.release.xcconfig"; sourceTree = "<group>"; };
 		EB903D33600997305EE0760B /* Pods_swift_github_repo_search_lab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_github_repo_search_lab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F38740601DCA28E70054AD82 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		F38740621DCA28F70054AD82 /* GithubAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAPIClient.swift; sourceTree = "<group>"; };
+		F38740641DCA29050054AD82 /* ReposDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposDataStore.swift; sourceTree = "<group>"; };
+		F38740661DCA29130054AD82 /* ReposTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposTableViewController.swift; sourceTree = "<group>"; };
+		F38740681DCA292E0054AD82 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F387406A1DCA2C560054AD82 /* GithubRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
+		F387406C1DCA2C690054AD82 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +97,15 @@
 		1BF884A61DBE950C001E9E9B /* swift-github-repo-search-lab */ = {
 			isa = PBXGroup;
 			children = (
+				F387406A1DCA2C560054AD82 /* GithubRepository.swift */,
+				F387406C1DCA2C690054AD82 /* LaunchScreen.storyboard */,
+				F38740681DCA292E0054AD82 /* Main.storyboard */,
+				F38740661DCA29130054AD82 /* ReposTableViewController.swift */,
+				F38740641DCA29050054AD82 /* ReposDataStore.swift */,
+				F38740621DCA28F70054AD82 /* GithubAPIClient.swift */,
+				F38740601DCA28E70054AD82 /* Secrets.swift */,
 				1BF884A71DBE950C001E9E9B /* AppDelegate.swift */,
 				1BF884A91DBE950C001E9E9B /* ViewController.swift */,
-				1B15A1381DC29F9D00B15C9F /* Secrets.swift */,
 				1B15A13A1DC29FA500B15C9F /* Resources */,
 			);
 			path = "swift-github-repo-search-lab";
@@ -166,7 +184,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BF884B21DBE950C001E9E9B /* LaunchScreen.storyboard in Resources */,
+				F38740691DCA292E0054AD82 /* Main.storyboard in Resources */,
 				1B15A13E1DC2A09900B15C9F /* repositories.json in Resources */,
+				F387406D1DCA2C690054AD82 /* LaunchScreen.storyboard in Resources */,
 				1BF884AF1DBE950C001E9E9B /* Assets.xcassets in Resources */,
 				1B15A13D1DC2A09900B15C9F /* not_starred.json in Resources */,
 			);
@@ -187,7 +207,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		DF305EFCFAE7C62AFBB444A8 /* [CP] Embed Pods Frameworks */ = {
@@ -227,9 +247,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F38740631DCA28F70054AD82 /* GithubAPIClient.swift in Sources */,
 				1BF884AA1DBE950C001E9E9B /* ViewController.swift in Sources */,
-				1B15A1391DC29F9D00B15C9F /* Secrets.swift in Sources */,
+				F38740651DCA29050054AD82 /* ReposDataStore.swift in Sources */,
+				F38740611DCA28E70054AD82 /* Secrets.swift in Sources */,
 				1BF884A81DBE950C001E9E9B /* AppDelegate.swift in Sources */,
+				F387406B1DCA2C560054AD82 /* GithubRepository.swift in Sources */,
+				F38740671DCA29130054AD82 /* ReposTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
