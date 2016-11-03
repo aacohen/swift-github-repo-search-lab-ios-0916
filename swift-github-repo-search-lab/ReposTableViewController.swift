@@ -14,12 +14,12 @@ class ReposTableViewController: UITableViewController {
     
     @IBAction func searchButton(_ sender: AnyObject) {
         
-        let alertController = UIAlertController(title: "Search", message: nil, preferredStyle: .default)
+        let alertController = UIAlertController(title: "Search", message: nil, preferredStyle: .alert)
         
         let searchAction = UIAlertAction(title: "Search", style: .default) { (action) in
-            let searchTextField = alertController.textFields[0] as UITextField
+        let searchTextField = alertController.textFields?[0] as UITextField!
             
-            let searchText = searchTextField.text
+            let searchText = searchTextField?.text
         }
         searchAction.isEnabled = true
         

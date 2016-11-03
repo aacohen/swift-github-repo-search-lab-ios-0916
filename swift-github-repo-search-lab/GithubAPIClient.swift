@@ -13,23 +13,35 @@ class GithubAPIClient {
     
     class func getRepositories(with completion: @escaping ([Any]) -> ()) {
         let urlString = "\(Secrets.githubAPIURL)/repositories?client_id=\(Secrets.clientID)&client_secret=\(Secrets.clientSecret)"
-        let url = URL(string: urlString)
-        let session = URLSession.shared
         
-        guard let unwrappedURL = url else { fatalError("Invalid URL") }
-        let task = session.dataTask(with: unwrappedURL, completionHandler: { (data, response, error) in
-            guard let data = data else { fatalError("Unable to get data \(error?.localizedDescription)") }
-            
-            if let responseArray = try? JSONSerialization.jsonObject(with: data, options: []) as? [Any] {
-                print(1)
-                if let responseArray = responseArray {
-                    print(2)
-                    completion(responseArray)
+        Alamofire.request(urlString).responseJSON { (response) in
+            if let json = response.result.value as? [Any] {
+                
+                print("JSON:\(json)")
+                completion(json)
+                
                 }
-            }
-        })
-        task.resume()
-    }
+                
+           
+                }
+
+            
+            
+        }
+    
+//        guard let unwrappedURL = url else { fatalError("Invalid URL") }
+//        let task = session.dataTask(with: unwrappedURL, completionHandler: { (data, response, error) in
+//            guard let data = data else { fatalError("Unable to get data \(error?.localizedDescription)") }
+//            
+//            if let responseArray = try? JSONSerialization.jsonObject(with: data, options: []) as? [Any] {
+//                print(1)
+//                if let responseArray = responseArray {
+//                    print(2)
+//                    completion(responseArray)
+//                }
+//            }
+//        })
+//        task.resume()
     
     
     
@@ -149,20 +161,19 @@ class GithubAPIClient {
         task.resume()
     }
     
-    class func repoSearch (name: String, completion: ()->()) {
-       let url = "\(Secrets.githubAPIURL)/search/repositories"
-    let q = "?q="
-        let textToSearch = ""
-        
-        let searchURL = url + q + textToSearch
-        
-     Alamofire.request(searchURL).responseJSON { (response) in
-        if let JSON = response.result.value {
-            print("JSON: \(JSON)")
-        }
-        }
-        
-    }
+//    class func repoSearch (name: String, completion: ()->()) {
+//       let url = "\(Secrets.githubAPIURL)/search/repositories"
+//    let q = "?q="
+//        let textToSearch = ""
+//        
+//        let searchURL = url + q + textToSearch
+//        Alamofire.request(url: searchURL, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
+//            if let JSON = response.result.value {
+//                print("JSON: \(JSON)")
+//            }
+//
+//        }
+    
 
 }
 
