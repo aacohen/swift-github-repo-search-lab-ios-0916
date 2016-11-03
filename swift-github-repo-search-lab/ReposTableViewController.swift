@@ -15,23 +15,23 @@ class ReposTableViewController: UITableViewController {
     @IBAction func searchButton(_ sender: AnyObject) {
         
         let alertController = UIAlertController(title: "Search", message: nil, preferredStyle: .alert)
+    
         
-        let searchAction = UIAlertAction(title: "Search", style: .default) { (action) in
-        let searchTextField = alertController.textFields?[0] as UITextField!
-            
-            let searchText = searchTextField?.text
-        }
-        searchAction.isEnabled = true
-        
-        let submitAction = UIAlertAction(title: "Submit", style: .default, handler: nil)
+        let submitAction = UIAlertAction(title: "Submit", style: .default) { (action) in
+            let searchText = alertController.textFields?[0] as UITextField!
+            let text = searchText?.text
+//            self.submit(searchText?.text!)
+            GithubAPIClient.repoSearch
+  
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
         alertController.addAction(cancelAction)
-        alertController.addAction(searchAction)
         alertController.addAction(submitAction)
+        alertController.addTextField()
+        
         self.present(alertController, animated: true, completion: nil)
         
     }
-    
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         

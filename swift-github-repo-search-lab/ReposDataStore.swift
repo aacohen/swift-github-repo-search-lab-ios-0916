@@ -28,6 +28,7 @@ class ReposDataStore {
 
         }
     }
+
     
     class func toggleStar(for name:String, completion:@escaping (Bool)->()){
         GithubAPIClient.checkIfRepositoryIsStarred(name) { (isStarred) in

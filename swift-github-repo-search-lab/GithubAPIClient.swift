@@ -161,19 +161,25 @@ class GithubAPIClient {
         task.resume()
     }
     
-//    class func repoSearch (name: String, completion: ()->()) {
-//       let url = "\(Secrets.githubAPIURL)/search/repositories"
-//    let q = "?q="
-//        let textToSearch = ""
-//        
-//        let searchURL = url + q + textToSearch
-//        Alamofire.request(url: searchURL, parameters: nil, encoding: .URL, headers: nil).validate().responseJSON { (response) in
-//            if let JSON = response.result.value {
-//                print("JSON: \(JSON)")
-//            }
-//
-//        }
     
-
+    //currently working on this function.
+    class func repoSearch (name: String, completion: @escaping ([Any]) -> ()) {
+        let url = "\(Secrets.githubAPIURL)/search/repositories"
+        let q = "?q="
+        let textToSearch = ""
+        
+        let searchURL = url + q + textToSearch
+        Alamofire.request(searchURL).responseJSON { (response) in
+            if let json = response.result.value as? [Any] {
+                
+                print("JSON:\(json)")
+                completion(json)
+                
+            }
+            
+        }
+        
+        
+    }
 }
 
