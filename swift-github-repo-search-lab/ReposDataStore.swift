@@ -25,12 +25,28 @@ class ReposDataStore {
                 
             }
             completion()
-
+            
         }
     }
-
     
-    class func toggleStar(for name:String, completion:@escaping (Bool)->()){
+    func getSearchRepositories(with name: String, completion: @escaping ()->()) {
+        print("searchingRepo function getting called")
+        GithubAPIClient.repoSearch(name: name) { (reposArray) in
+            print("api call for repos")
+            self.repositories.removeAll()
+            for dictionary in reposArray {
+                guard let repoDictionary = dictionary as? [String : AnyObject] else { fatalError("Object in reposArray is of non-dictionary type") }
+                let repository = GithubRepository(dictionary: repoDictionary)
+                self.repositories.append(repository)
+            }
+            
+            completion()
+            
+        }
+    }
+    
+    
+    func toggleStar(for name:String, completion:@escaping (Bool)->()){
         GithubAPIClient.checkIfRepositoryIsStarred(name) { (isStarred) in
             if isStarred == true{
                 GithubAPIClient.unstarRepo(for: name, completion: { (success) in
@@ -40,7 +56,7 @@ class ReposDataStore {
             }else{
                 GithubAPIClient.starRepo(for: name, completion: { (success) in
                     completion(true)
-
+                    
                 })
                 
             }
@@ -49,6 +65,4 @@ class ReposDataStore {
         }
         
     }
-
-
 }
